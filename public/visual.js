@@ -1,13 +1,14 @@
 class circleObj {
 	constructor(x, y) {
 	  this.pos = new p5.Vector(x, y);
-	  this.size = 800;
+    this.size = windowHeight*0.9;
 	  this.direction = new p5.Vector(random(-1, 1), random(-1, 1));
 	}
   
 	display(c) {
 	  this.updateColor(c);
 	  ellipse(this.pos.x, this.pos.y, this.size);
+	  // drawingContext.filter = 'blur(8px)';
 	  this.move();
 	}
   
